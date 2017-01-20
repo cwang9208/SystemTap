@@ -26,10 +26,29 @@ sudo apt-get update
 sudo apt-get install linux-image-$(uname -r)-dbgsym
 ```
 
+### Running SystemTap Scripts
+```
+Usage: stap [options] FILE         Run script in file.
+   or: stap [options] -e SCRIPT    Run given script.
+
+Options:
+   -v         add verbosity to all passes
+```
 ## Understanding How SystemTap Works
 SystemTap allows users to write and reuse simple scripts to deeply examine the activities of a running Linux system. These scripts can be designed to extract data, filter it, and summarize it quickly (and safely), enabling the diagnosis of complex performance (or even functional) problems.
 
 The essential idea behind a SystemTap script is to name *events*, and to give them handlers. When SystemTap runs the script, SystemTap monitors for the event; once the event occurs, the Linux kernel then runs the handler as a quick sub-routine, then resumes.
+
+### SystemTap Scripts
+SystemTap scripts are made up of two components: events and handlers. Once a SystemTap session is underway, SystemTap monitors the operating system for the specified events and executes the handlers as they occur.
+
+Note: An event and its corresponding handler is collectively called a probe. A SystemTap script can have multiple probes.
+
+SystemTap scripts use the file extension **.stp**, and contains probes written in the following format: 
+```
+probe event {statements}
+```
+Each probe has a corresponding statement block. This statement block is enclosed in braces (**{** **}**) and contains the statements to be executed per event.
 
 ## Useful SystemTap Scripts
 
