@@ -1,4 +1,7 @@
 # SystemTap
+SystemTap provides free software (GPL) infrastructure to simplify the gathering of information about the running Linux system.
+
+Tested using 3.5.0--generic, systemtap 2.3.
 
 ## Using SystemTap
 ### Installation and Setup
