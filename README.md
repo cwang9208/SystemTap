@@ -4,8 +4,6 @@ SystemTap provides free software (GPL) infrastructure to simplify the gathering 
 Tested using 3.13.0-107-generic, systemtap 2.3.
 
 ## Using SystemTap
-### Disabling Secure Boot
-BIOS Setup -> Secure Boot -> Secure Boot Enable -> Disabled
 ### Installation and Setup
 #### Installing SystemTap
 On Ubuntu or Debian, use "apt-get install systemtap".
@@ -39,6 +37,7 @@ Usage: stap [options] FILE         Run script in file.
 Options:
    -v         add verbosity to all passes
 ```
+To disable secure boot: BIOS Setup -> Secure Boot -> Secure Boot Enable -> Disabled
 ## Understanding How SystemTap Works
 SystemTap allows users to write and reuse simple scripts to deeply examine the activities of a running Linux system. These scripts can be designed to extract data, filter it, and summarize it quickly (and safely), enabling the diagnosis of complex performance (or even functional) problems.
 
